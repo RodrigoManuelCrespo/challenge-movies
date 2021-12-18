@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCredits } from "../actions";
 
-
 export function CreditDetail({movieId}){
     const dispatch = useDispatch()
 

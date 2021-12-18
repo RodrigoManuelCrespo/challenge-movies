@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export function Card({movie}){
     const imageUrl = 'https://image.tmdb.org/t/p/w300' + movie.poster_path
 
+    if(movie.poster_path && movie.title && movie.vote_average){ 
     return(
         <li>
             <Link to={"/home/" + movie.id}>
@@ -12,4 +13,7 @@ export function Card({movie}){
             </Link>
         </li>
     )
+    } else {
+        return null;
+    }
 }

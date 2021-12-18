@@ -1,11 +1,11 @@
-import { GET_DETAILS, GET_MOVIES, GET_NOW_PLAYING, GET_CREDITS } from "../actions";
+import { GET_DETAILS, GET_MOVIES, GET_NOW_PLAYING, GET_CREDITS, GET_SEARCH } from "../actions";
  
-
 const initialState = {
     movies: [],
     details: [],
     nowPlaying: [],
-    credits: []
+    credits: [],
+    search: [],
 }
 
 function rootReducer(state=initialState, action){
@@ -25,6 +25,10 @@ function rootReducer(state=initialState, action){
         case GET_CREDITS: return {
             ...state,
             credits: action.payload
+        };
+        case GET_SEARCH: return {
+            ...state,
+            search: action.payload
         };
         default: return state;
     }
