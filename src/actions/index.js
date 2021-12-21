@@ -11,7 +11,7 @@ export const GET_SEARCH = 'GET_SEARCH'
 export function getMovies(){
     return async function(dispatch){
        
-        const movies = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${REACT_APP_API_KEY}`) 
+        const movies = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_API_KEY}&language=en-US&page=1`) 
         
         return dispatch({
             type: GET_MOVIES,

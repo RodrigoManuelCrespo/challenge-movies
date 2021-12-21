@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSearch } from "../actions";
-import { Card } from "../components/Card";
+import { MovieCard } from "./MovieCard";
 
 export function SearchDetail({name}){
 
@@ -15,13 +15,18 @@ export function SearchDetail({name}){
 
     if(searchMovies.length>0){
     return(
-        <div>
-            <ul>
-                {searchMovies.map((movie)=><Card key={movie.id} movie={movie}/>)}
-            </ul>
+        <div className="container">
+            <h4 className="mt-4 mb-4">Search for: "{name}"</h4>
+            <div className="row">
+                {searchMovies.map((movie)=><MovieCard key={movie.id} movie={movie}/>)}
+            </div>
         </div>
     )
     } else {
-        return <p>Movie not found</p>
+        return (
+            <div className="container">
+                <h4 className="mt-4 mb-4">Movie not found</h4>
+            </div>
+        )
     }
 }

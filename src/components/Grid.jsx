@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { getMovies } from "../actions";
-import { Card } from "./Card";
+import { MovieCard } from "./MovieCard";
 
 export function Grid(){
 
@@ -16,12 +16,10 @@ export function Grid(){
     }, [dispatch])
 
     return(
-        <div>
-            <div>
-                <h2>Peliculas</h2>
-                <ul>
-                    {allMovies.map((movie)=><Card key={movie.id} movie={movie}/>)}
-                </ul>
+        <div className="container">
+            <h3 className="mb-4">Trending</h3>
+            <div className="row">
+                {allMovies.map((movie)=><MovieCard key={movie.id} movie={movie}/>)}
             </div>
         </div>
     )

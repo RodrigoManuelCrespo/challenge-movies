@@ -18,19 +18,20 @@ export function MovieDetail({movieId}){
     const imageUrl = 'https://image.tmdb.org/t/p/w300' + detail.poster_path
 
     return(
-        <div>
-            <div>
-                <img src={imageUrl} alt={detail.title}/>
-            </div>
-            <div>
-                <h2>{detail.title}</h2>
-                <h5>{detail.vote_average}</h5>
-                <p>{detail.overview}</p>
-            </div>
-            <div>
-                <Link to='/home'>
-                    <button>Back</button>
-                </Link>
+        <div className="container mt-5 mb-5">
+            <div className="row">
+                <div className="col-12 col-md-6 d-flex justify-content-center">
+                    <img src={imageUrl} alt={detail.title} className="pb-4"/>
+                </div>
+                <div className="col-12 col-md-6">
+                    <h2>{detail.title}</h2>
+                    <h5>{detail.vote_average}</h5>
+                    <h6>Overview:</h6>
+                    <p>{detail.overview}</p>
+                    <Link to='/home'>
+                        <button className="btn btn-primary d-flex justify-content-center">Back</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
