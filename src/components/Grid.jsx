@@ -17,7 +17,7 @@ export function Grid(){
 
     return(
         <div className="container">
-            <h3 className="mb-4">Trending</h3>
+            <h4 className="mb-4">What's Popular</h4>
             <div className="row">
                 {allMovies.map((movie)=><MovieCard key={movie.id} movie={movie}/>)}
             </div>

@@ -7,14 +7,21 @@ export function MovieCard({movie}){
     if(movie.poster_path && movie.title && movie.vote_average){ 
     return(
         <div className="col-12 col-md-4 col-lg-3 pb-4 d-flex justify-content-center">
-            <Link to={"/home/" + movie.id}>
-                <Card style={{ width: '12rem' }} >
-                  <Card.Img variant="top" src={imageUrl} />
-                  <Card.Body>
-                    <Card.Text>{movie.vote_average}</Card.Text>
-                    <Card.Title>{movie.title}</Card.Title>
-                    <Card.Text>{movie.release_date}</Card.Text>
-                  </Card.Body>
+            <Link to={"/" + movie.id}>
+                <Card style={{ width: '12rem' }} className="border-0">
+                    <Card.Img variant="top" src={imageUrl} className="rounded-3"/>
+                    <Card.Body>
+                        { movie.vote_average > 7 ? 
+                            <label className="h6 p-2 bg-opacity-75 border border-success border-3 bg-dark text-light rounded-circle">{movie.vote_average}</label> :  
+                            <label className="h6 p-2 bg-opacity-75 border border-warning border-3 bg-dark text-light rounded-circle">{movie.vote_average}</label>
+                        } 
+                        <Card.Title>
+                            <label className="text-decoration-none fw-bold text-dark">{movie.title}</label>
+                        </Card.Title>
+                        <Card.Text>
+                            <label className="text-decoration-none fw-lighter text-dark">{movie.release_date}</label>   
+                        </Card.Text>
+                    </Card.Body>
                 </Card>
             </Link>
         </div>

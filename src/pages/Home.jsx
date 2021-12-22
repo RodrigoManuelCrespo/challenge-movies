@@ -2,7 +2,7 @@ import { Grid } from "../components/Grid";
 import { Header } from "../components/Header";
 import { Billboard } from "../components/Billboard";
 import { IntroHome } from "../components/IntroHome";
-
+import { Footer } from "../components/Footer";
 
 export function Home(){
     return(
@@ -11,6 +11,7 @@ export function Home(){
             <IntroHome />
             <Billboard />
             <Grid />
+            <Footer />
         </div>
     )
 } 

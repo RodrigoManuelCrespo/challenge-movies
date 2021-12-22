@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSearch } from "../actions";
 import { MovieCard } from "./MovieCard";
+import { Link } from "react-router-dom";
 
 export function SearchDetail({name}){
 
@@ -25,7 +26,12 @@ export function SearchDetail({name}){
     } else {
         return (
             <div className="container">
-                <h4 className="mt-4 mb-4">Movie not found</h4>
+                <div className="container">
+                    <h4 className="mt-5">Sorry! Movie not found...</h4>
+                </div>
+                <Link to='/'>
+                    <button className="btn btn-success mt-3 ms-2">Back</button>
+                </Link>
             </div>
         )
     }

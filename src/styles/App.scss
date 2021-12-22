@@ -1,0 +1,29 @@
+$color1:#001735;
+$color2:#003c7e;
+$color3:#0096ff;
+$color4:#00f3ff;
+$color5:#a6ffff;
+
+.navbarColor {
+    background-color: $color1;
+}
+
+.logoColor {
+    color: $color5;
+}
+
+.submitHeader {
+    background: rgb(48,179,147);
+    background: linear-gradient(90deg, rgba(48,179,147,1) 0%, rgba(38,151,186,1) 49%, rgba(33,159,195,1) 100%, rgba(0,207,255,0.4303921397660627) 100%); 
+}
+
+.welcomeColor { 
+    background-image: url('../image/welcome.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.detailColor {
+    background: rgb(83,116,128);
+    background: linear-gradient(90deg, rgba(83,116,128,1) 0%, rgba(72,101,111,1) 49%, rgba(52,68,79,1) 100%);  
+}

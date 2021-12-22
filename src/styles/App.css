@@ -1,0 +1,26 @@
+.navbarColor {
+  background-color: #001735;
+}
+
+.logoColor {
+  color: #a6ffff;
+}
+
+.submitHeader {
+  background: #30b393;
+  background: -webkit-gradient(linear, left top, right top, from(#30b393), color-stop(49%, #2697ba), color-stop(100%, #219fc3), to(rgba(0, 207, 255, 0.430392)));
+  background: linear-gradient(90deg, #30b393 0%, #2697ba 49%, #219fc3 100%, rgba(0, 207, 255, 0.430392) 100%);
+}
+
+.welcomeColor {
+  background-image: url("../image/welcome.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.detailColor {
+  background: #537480;
+  background: -webkit-gradient(linear, left top, right top, from(#537480), color-stop(49%, #48656f), to(#34444f));
+  background: linear-gradient(90deg, #537480 0%, #48656f 49%, #34444f 100%);
+}
+/*# sourceMappingURL=App.css.map */

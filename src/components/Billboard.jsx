@@ -11,29 +11,27 @@ export function Billboard(){
         dispatch(getNowPlaying());
     }, [dispatch])
 
-    const nowPlaying = useSelector((state) => state.nowPlaying) 
+    const nowPlaying = useSelector((state) => state.nowPlaying); 
 
-    const firstMovies = nowPlaying.slice(0,4)
-
-    console.log(firstMovies)
+    const firstMovies = nowPlaying.slice(0,3);
 
     return(
         <div className="container mt-5 mb-5">
         <Carousel>
         {
-            firstMovies.map((movie)=> {
+            firstMovies.map((movie, key)=> {
                 return (
-                    <Carousel.Item>
+                    <Carousel.Item key={key}>
                         <img
-                        className="opacity-50 d-block w-100"
+                        className="opacity-50 ps-4 pe-4 w-100"
+                        height={275}
                         src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                         alt={movie.title}
-                        height={300}
                         />
                         <Carousel.Caption>
-                            <div className="bg-black opacity-50">
+                            <div className="bg-black opacity-75">
                                 <h3>{movie.title}</h3>
-                                <p>{movie.overview}</p>
+                                <p className="fs-6">{movie.overview}</p>
                             </div>
                         </Carousel.Caption>
                     </Carousel.Item>

@@ -7,24 +7,22 @@ export function Header(){
     const [searchMovie, setSearchMovie] = useState('');
 
     return(
-        <div>
-            <nav className="navbar navbar-dark bg-primary">
+        <div className="navbarColor">
+            <nav className="navbar">
                 <div className="container-fluid">
-                    <Link to="/home">
-                        <label className="navbar-brand">Movies</label>
+                    <Link to="/">
+                        <label className="navbar-brand fw-bold logoColor ps-4">MoviesDB</label>
                     </Link>
-                    <form class="d-flex">
+                    <form className="d-flex pe-4">
                         <input 
-                            className="form-control me-2" 
+                            className="form-control" 
                             type="search" 
                             placeholder="Search for a movie..." 
                             aria-label="Search" 
-                            type='text' 
-                            placeholder='Search for a movie...'
                             onChange={((e)=>setSearchMovie(e.target.value))}
                         />
-                        <Link to={`/home/search/${searchMovie}`}>
-                            <button className="btn btn-outline-light">Search</button>
+                        <Link to={`/search/${searchMovie}`}>
+                            <button className="btn fw-bold submitHeader border-0 btn-outline-light">Search</button>
                         </Link>
                     </form>
                 </div>
