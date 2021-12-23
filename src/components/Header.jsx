@@ -15,15 +15,21 @@ export function Header(){
                     </Link>
                     <form className="d-flex pe-4">
                         <input 
-                            className="form-control" 
+                            className="form-control rounded-3 me-2" 
                             type="search" 
                             placeholder="Search for a movie..." 
                             aria-label="Search" 
                             onChange={((e)=>setSearchMovie(e.target.value))}
                         />
-                        <Link to={`/search/${searchMovie}`}>
-                            <button className="btn fw-bold submitHeader border-0 btn-outline-light">Search</button>
-                        </Link>
+                        {
+                            searchMovie ?
+                            <Link to={`/search/${searchMovie}`}>
+                                <button className="btn fw-bold btnSubmit border-0 btn-outline-light">Search</button>
+                            </Link> :
+                            <Link to={`/`}>
+                                <button className="btn fw-bold btnSubmit border-0 btn-outline-light">Search</button>
+                            </Link>
+                        }
                     </form>
                 </div>
             </nav>

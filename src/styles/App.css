@@ -6,10 +6,18 @@
   color: #a6ffff;
 }
 
-.submitHeader {
+.btnSubmit {
   background: #30b393;
   background: -webkit-gradient(linear, left top, right top, from(#30b393), color-stop(49%, #2697ba), color-stop(100%, #219fc3), to(rgba(0, 207, 255, 0.430392)));
   background: linear-gradient(90deg, #30b393 0%, #2697ba 49%, #219fc3 100%, rgba(0, 207, 255, 0.430392) 100%);
+}
+
+.cardLink:hover {
+  opacity: .7;
+  transition: opacity .3s ease-out;
+  -moz-transition: opacity .3s ease-out;
+  -webkit-transition: opacity .3s ease-out;
+  -o-transition: opacity .3s ease-out;
 }
 
 .welcomeColor {

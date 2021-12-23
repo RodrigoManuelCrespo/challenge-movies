@@ -9,7 +9,7 @@ export function MovieCard({movie}){
         <div className="col-12 col-md-4 col-lg-3 pb-4 d-flex justify-content-center">
             <Link to={"/" + movie.id}>
                 <Card style={{ width: '12rem' }} className="border-0">
-                    <Card.Img variant="top" src={imageUrl} className="rounded-3"/>
+                    <Card.Img variant="top" src={imageUrl} className="rounded-3 cardLink"/>
                     <Card.Body>
                         { movie.vote_average > 7 ? 
                             <label className="h6 p-2 bg-opacity-75 border border-success border-3 bg-dark text-light rounded-circle">{movie.vote_average}</label> :  

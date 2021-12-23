@@ -1,8 +1,12 @@
+//Variable 
+
 $color1:#001735;
 $color2:#003c7e;
 $color3:#0096ff;
 $color4:#00f3ff;
 $color5:#a6ffff;
+
+//Class
 
 .navbarColor {
     background-color: $color1;
@@ -12,9 +16,17 @@ $color5:#a6ffff;
     color: $color5;
 }
 
-.submitHeader {
+.btnSubmit {
     background: rgb(48,179,147);
     background: linear-gradient(90deg, rgba(48,179,147,1) 0%, rgba(38,151,186,1) 49%, rgba(33,159,195,1) 100%, rgba(0,207,255,0.4303921397660627) 100%); 
+}
+
+.cardLink:hover {
+    opacity: .7;
+    transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
 }
 
 .welcomeColor { 

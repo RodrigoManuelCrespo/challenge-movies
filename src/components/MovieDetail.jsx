@@ -16,17 +16,20 @@ export function MovieDetail({movieId}){
     
     return(
         <div className= "detailColor text-light">
-            <div className="container mb-5">
+            <div className="container mb-5 pb-4">
                 <div className="row pt-5">
-                    <div className="col-12 col-md-6 d-flex justify-content-center">
+                    <div className="col-12 col-lg-4 d-flex justify-content-center">
                         {
-                            detail.poster_path ? <img src={'https://image.tmdb.org/t/p/w300' + detail.poster_path} alt={detail.title} className="pb-4"/> : <p>Loading...</p>
+                            detail.poster_path ? <img src={'https://image.tmdb.org/t/p/w300' + detail.poster_path} alt={detail.title} className="pb-4 rounded-3"/> : <p>Loading...</p>
                         }
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-lg-8">
                         <div className="mb-4">
                             <h2>{detail.title}</h2>
-                            <h4>{detail.release_date}</h4>
+                            <h5>{detail.release_date}</h5>
+                            {
+                                detail.genres ? detail.genres.map((e)=>e.name).join(', ') : null
+                            }
                         </div>
                         <div>
                             <h6>User Score:</h6>

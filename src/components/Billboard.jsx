@@ -13,10 +13,10 @@ export function Billboard(){
 
     const nowPlaying = useSelector((state) => state.nowPlaying); 
 
-    const firstMovies = nowPlaying.slice(0,3);
+    const firstMovies = nowPlaying.slice(0,4);
 
     return(
-        <div className="container mt-5 mb-5">
+        <div className="container mt-5 d-none d-md-block">
         <Carousel>
         {
             firstMovies.map((movie, key)=> {
